@@ -1,0 +1,7 @@
+.idea/
+*.class
+*/production
+.DS_Store
+/target/
+*.iml
+/production
