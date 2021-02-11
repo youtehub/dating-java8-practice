@@ -1,6 +1,6 @@
-package com.lingyejun.dating.chap2.practice.strategypattern;
+package com.lingyejun.dating.chap1.practice.strategypattern;
 
-import com.lingyejun.dating.chap2.practice.Phone;
+import com.lingyejun.dating.chap1.practice.Phone;
 import lombok.*;
 
 /**
@@ -14,12 +14,12 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class PredigestPhonePricePredicate implements PhonePredicate {
+public class PredigestPhoneColorPredicate implements PhonePredicate {
 
     /**
-     * 价格
+     * 颜色
      */
-    private Integer price;
+    private String color;
 
     /**
      * 判断手机是否满足某一个条件
@@ -29,6 +29,6 @@ public class PredigestPhonePricePredicate implements PhonePredicate {
      */
     @Override
     public boolean percolate(Phone phone) {
-        return phone.getPrice() > price;
+        return color.equals(phone.getColor());
     }
 }

@@ -1,6 +1,5 @@
-package com.lingyejun.dating.chap2.practice;
+package com.lingyejun.dating.chap1.practice;
 
-import com.google.common.base.Function;
 import org.junit.Test;
 
 import java.util.ArrayList;

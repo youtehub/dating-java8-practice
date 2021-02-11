@@ -1,4 +1,4 @@
-package com.lingyejun.dating.chap2;
+package com.lingyejun.dating.chap1;
 
 /**
  * @Author: lingyejun

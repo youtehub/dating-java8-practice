@@ -1,7 +1,7 @@
-package com.lingyejun.dating.chap3;
+package com.lingyejun.dating.chap2_3;
 
-import com.lingyejun.dating.chap2.Phone;
-import com.lingyejun.dating.chap2.PhoneMain;
+import com.lingyejun.dating.chap1.Phone;
+import com.lingyejun.dating.chap1.PhoneMain;
 
 import java.util.Comparator;
 import java.util.List;
@@ -39,4 +39,6 @@ public class EndTest {
         // 4.方法引用
         phoneList.sort(Comparator.comparing((Phone::getPrice)));
     }
+
+
 }

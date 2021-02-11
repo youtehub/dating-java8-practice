@@ -1,4 +1,4 @@
-package com.lingyejun.dating.chap3;
+package com.lingyejun.dating.chap2_3;
 
 import java.util.function.*;
 

@@ -1,6 +1,6 @@
-package com.lingyejun.dating.chap3;
+package com.lingyejun.dating.chap2_3;
 
-import com.lingyejun.dating.chap2.Phone;
+import com.lingyejun.dating.chap1.Phone;
 
 import java.util.Comparator;
 

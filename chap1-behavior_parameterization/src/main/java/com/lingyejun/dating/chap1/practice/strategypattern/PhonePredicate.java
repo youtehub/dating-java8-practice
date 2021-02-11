@@ -1,6 +1,6 @@
-package com.lingyejun.dating.chap2.practice.strategypattern;
+package com.lingyejun.dating.chap1.practice.strategypattern;
 
-import com.lingyejun.dating.chap2.practice.Phone;
+import com.lingyejun.dating.chap1.practice.Phone;
 
 /**
  * 手机过滤策略接口

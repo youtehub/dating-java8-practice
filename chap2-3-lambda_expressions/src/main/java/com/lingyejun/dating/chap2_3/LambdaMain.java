@@ -1,8 +1,8 @@
-package com.lingyejun.dating.chap3;
+package com.lingyejun.dating.chap2_3;
 
-import com.lingyejun.dating.chap2.Phone;
-import com.lingyejun.dating.chap2.PhoneMain;
-import com.lingyejun.dating.chap2.PhonePredicate;
+import com.lingyejun.dating.chap1.Phone;
+import com.lingyejun.dating.chap1.PhoneMain;
+import com.lingyejun.dating.chap1.PhonePredicate;
 
 import java.util.ArrayList;
 import java.util.List;

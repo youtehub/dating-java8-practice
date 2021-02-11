@@ -1,9 +1,9 @@
-package com.lingyejun.dating.chap2.practice;
+package com.lingyejun.dating.chap1.practice;
 
-import com.lingyejun.dating.chap2.practice.strategypattern.PhoneColorPredicate;
-import com.lingyejun.dating.chap2.practice.strategypattern.PhonePredicate;
-import com.lingyejun.dating.chap2.practice.strategypattern.PhonePredicateBusiness;
-import com.lingyejun.dating.chap2.practice.strategypattern.PhonePricePredicate;
+import com.lingyejun.dating.chap1.practice.strategypattern.PhoneColorPredicate;
+import com.lingyejun.dating.chap1.practice.strategypattern.PhonePredicate;
+import com.lingyejun.dating.chap1.practice.strategypattern.PhonePredicateBusiness;
+import com.lingyejun.dating.chap1.practice.strategypattern.PhonePricePredicate;
 import org.junit.Test;
 
 import java.util.List;

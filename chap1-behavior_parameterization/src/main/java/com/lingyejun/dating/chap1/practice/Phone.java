@@ -1,4 +1,4 @@
-package com.lingyejun.dating.chap2.practice;
+package com.lingyejun.dating.chap1.practice;
 
 import lombok.*;
 

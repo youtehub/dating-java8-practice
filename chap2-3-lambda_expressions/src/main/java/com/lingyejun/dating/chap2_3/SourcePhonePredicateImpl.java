@@ -1,7 +1,7 @@
-package com.lingyejun.dating.chap3;
+package com.lingyejun.dating.chap2_3;
 
-import com.lingyejun.dating.chap2.Phone;
-import com.lingyejun.dating.chap2.PhonePredicate;
+import com.lingyejun.dating.chap1.Phone;
+import com.lingyejun.dating.chap1.PhonePredicate;
 
 /**
  * @Author: lingyejun

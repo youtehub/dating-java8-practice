@@ -1,4 +1,4 @@
-package com.lingyejun.dating.chap2;
+package com.lingyejun.dating.chap1;
 
 import java.util.ArrayList;
 import java.util.List;

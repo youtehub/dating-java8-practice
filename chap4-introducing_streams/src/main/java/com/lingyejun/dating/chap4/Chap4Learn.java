@@ -1,7 +1,7 @@
 package com.lingyejun.dating.chap4;
 
-import com.lingyejun.dating.chap2.Phone;
-import com.lingyejun.dating.chap2.PhoneMain;
+import com.lingyejun.dating.chap1.Phone;
+import com.lingyejun.dating.chap1.PhoneMain;
 
 import java.util.*;
 import java.util.stream.Collectors;
