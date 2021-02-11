@@ -45,7 +45,10 @@ Lambda表达式由三部分组成
 - 箭头：箭头->把参数列表与Lambda主体分隔开。
 - Lambda主体：比较两个Apple的重量。表达式就是Lambda的返回值了。 
 
+Lambda的基本语法是
 
+- (parameters) -> expression
+- (parameters) -> { statements; }
 
 
 ## 函数式接口
@@ -98,3 +101,14 @@ public void process(Runnable r) {
 @FunctionalInterface**这个标注用于表示该接口会设计成一个函数式接口**。
 
 请注意，@FunctionalInterface不是必需的，但对于为此设计的接口而言，使用它是比较好的做法。它就像是@Override标注，表示方法被重写了。
+
+## 来一个实践
+看看在实践中如何利用Lambda和行为参数化来让代码更为灵活，更为简洁。
+
+1.记得行为参数化
+
+2.使用函数式接口来传递行为
+
+3.执行一个行为
+
+4.传递ambda

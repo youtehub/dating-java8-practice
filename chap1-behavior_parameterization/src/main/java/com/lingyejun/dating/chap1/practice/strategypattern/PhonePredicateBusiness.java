@@ -4,6 +4,7 @@ import com.lingyejun.dating.chap1.practice.Phone;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 手机过滤策略业务类
@@ -32,5 +33,6 @@ public class PhonePredicateBusiness {
             }
         }
         return filteredPhone;
+
     }
 }
