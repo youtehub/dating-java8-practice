@@ -6,16 +6,16 @@
 
     <parent>
         <groupId>com.lingyejun</groupId>
-        <artifactId>dating-java8</artifactId>
+        <artifactId>dating-java8-practice</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>chap3-lambda_expressions</artifactId>
+    <artifactId>chap2-3-lambda_expressions</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.lingyejun</groupId>
-            <artifactId>chap2-behavior_parameterization</artifactId>
+            <artifactId>chap1-behavior_parameterization</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
