@@ -3,7 +3,6 @@ package com.lingyejun.dating.chap2.taught;
 import com.google.common.base.Supplier;
 import com.lingyejun.dating.chap1.Phone;
 import com.lingyejun.dating.chap1.practice.strategypattern.PhonePredicate;
-import com.lingyejun.dating.chap3.practice.taught.SourcePhonePredicateImpl;
 import org.junit.Test;
 
 import java.util.function.Consumer;
