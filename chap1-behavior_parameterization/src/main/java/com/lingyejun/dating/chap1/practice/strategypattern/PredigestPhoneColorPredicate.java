@@ -1,6 +1,6 @@
 package com.lingyejun.dating.chap1.practice.strategypattern;
 
-import com.lingyejun.dating.chap1.practice.Phone;
+import com.lingyejun.dating.chap1.practice.PhonePrcs;
 import lombok.*;
 
 /**
@@ -24,11 +24,11 @@ public class PredigestPhoneColorPredicate implements PhonePredicate {
     /**
      * 判断手机是否满足某一个条件
      *
-     * @param phone 需要校验的手机
+     * @param phonePrcs 需要校验的手机
      * @return 判断结果
      */
     @Override
-    public boolean percolate(Phone phone) {
-        return color.equals(phone.getColor());
+    public boolean percolate(PhonePrcs phonePrcs) {
+        return color.equals(phonePrcs.getColor());
     }
 }

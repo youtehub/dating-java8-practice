@@ -1,6 +1,6 @@
 package com.lingyejun.dating.chap1.practice.strategypattern;
 
-import com.lingyejun.dating.chap1.practice.Phone;
+import com.lingyejun.dating.chap1.practice.PhonePrcs;
 
 /**
  * 手机过滤策略接口
@@ -14,8 +14,8 @@ public interface PhonePredicate {
     /**
      * 判断手机是否满足某一个条件
      *
-     * @param phone 需要校验的手机
+     * @param phonePrcs 需要校验的手机
      * @return 判断结果
      */
-    boolean percolate(Phone phone);
+    boolean percolate(PhonePrcs phonePrcs);
 }

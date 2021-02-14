@@ -216,8 +216,8 @@ public class MethodReference {
 
         // 指向现有对象的实例方法的方法引用
         // 调用外部的对象
-        PhonePredicate phonePredicate = (Phone phone) -> true;
-        Function<Phone, Boolean> function4 = (Phone phone) -> phonePredicate.test(phone);
+        PhonePredicate phonePredicate = (Phone phonePrcs) -> true;
+        Function<Phone, Boolean> function4 = (Phone phonePrcs) -> phonePredicate.test(phonePrcs);
         System.out.println(function4.apply(new Phone()));
         Function<Phone, Boolean> function5 = phonePredicate::test;
         System.out.println(function5.apply(new Phone()));

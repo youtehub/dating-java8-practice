@@ -1,10 +1,9 @@
 package com.lingyejun.dating.chap1.practice.strategypattern;
 
-import com.lingyejun.dating.chap1.practice.Phone;
+import com.lingyejun.dating.chap1.practice.PhonePrcs;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 手机过滤策略业务类
@@ -21,18 +20,18 @@ public class PhonePredicateBusiness {
     /**
      * 根据指定的过滤策略选出符合类型的手机
      *
-     * @param phoneList      手机列表
+     * @param phonePrcsList      手机列表
      * @param phonePredicate 过滤策略
      * @return 符合标准的手机
      */
-    public static List<Phone> usePredicateImpl(List<Phone> phoneList, PhonePredicate phonePredicate) {
-        List<Phone> filteredPhone = new ArrayList<>();
-        for (Phone phone : phoneList) {
-            if (phonePredicate.percolate(phone)) {
-                filteredPhone.add(phone);
+    public static List<PhonePrcs> usePredicateImpl(List<PhonePrcs> phonePrcsList, PhonePredicate phonePredicate) {
+        List<PhonePrcs> filteredPhonePrcs = new ArrayList<>();
+        for (PhonePrcs phonePrcs : phonePrcsList) {
+            if (phonePredicate.percolate(phonePrcs)) {
+                filteredPhonePrcs.add(phonePrcs);
             }
         }
-        return filteredPhone;
+        return filteredPhonePrcs;
 
     }
 }

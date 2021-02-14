@@ -1,11 +1,17 @@
 package com.lingyejun.dating.chap4;
 
+import lombok.*;
+
 /**
  * @Author: lingyejun
  * @Date: 2019/11/10
  * @Describe:
  * @Modified By:
  */
+@Data
+@Builder
+@NoArgsConstructor
+@ToString
 public class Student {
 
     private String name;

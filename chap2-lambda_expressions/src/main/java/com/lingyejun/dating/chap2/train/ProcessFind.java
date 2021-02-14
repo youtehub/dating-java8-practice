@@ -1,6 +1,6 @@
 package com.lingyejun.dating.chap2.train;
 
-import com.lingyejun.dating.chap1.practice.Phone;
+import com.lingyejun.dating.chap1.practice.PhonePrcs;
 
 import java.util.List;
 
@@ -19,5 +19,5 @@ public interface ProcessFind {
      * @param list 需要筛选的手机
      * @return 符合条件的手机列表
      */
-    List<Phone> queryPhoneList(List<Phone> list);
+    List<PhonePrcs> queryPhoneList(List<PhonePrcs> list);
 }

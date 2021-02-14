@@ -1,6 +1,6 @@
 package com.lingyejun.dating.chap3.practice.taught;
 
-import com.lingyejun.dating.chap1.practice.Phone;
+import com.lingyejun.dating.chap1.practice.PhonePrcs;
 import org.junit.Test;
 
 import java.util.List;
@@ -51,11 +51,11 @@ public class FunctionLearnTest {
         //<T> Function<T, T> identity()
         //输入什么就返回什么,简化代码
         Function<String, String> functionIdentity = Function.identity();
-        List<Phone> phoneList = Phone.initPhoneList();
-        Map<Integer, Phone> productName = phoneList.stream()
+        List<PhonePrcs> phonePrcsList = PhonePrcs.initPhoneList();
+        Map<Integer, PhonePrcs> productName = phonePrcsList.stream()
                 .filter(phone -> "iPhone 11 Pro".equals(phone.getProductName()))
 //                .collect(Collectors.toMap(Phone::getProductName, phone -> phone));
-                .collect(Collectors.toMap(Phone::getId, Function.identity()));
+                .collect(Collectors.toMap(PhonePrcs::getId, Function.identity()));
         System.out.println(productName);
 
 

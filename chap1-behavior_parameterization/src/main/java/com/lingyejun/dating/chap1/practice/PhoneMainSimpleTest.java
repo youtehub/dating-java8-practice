@@ -18,94 +18,94 @@ public class PhoneMainSimpleTest {
     /**
      * 从手机列表中过滤出深空灰色的手机
      *
-     * @param phoneList 手机列表
+     * @param phonePrcsList 手机列表
      * @return phoneList 深空灰色的手机集合
      */
-    public List<Phone> filterGrayPhoneList(List<Phone> phoneList) {
-        List<Phone> filteredPhone = new ArrayList<>();
-        for (Phone phone : phoneList) {
-            if ("深空灰色".equals(phone.getColor())) {
-                filteredPhone.add(phone);
+    public List<PhonePrcs> filterGrayPhoneList(List<PhonePrcs> phonePrcsList) {
+        List<PhonePrcs> filteredPhonePrcs = new ArrayList<>();
+        for (PhonePrcs phonePrcs : phonePrcsList) {
+            if ("深空灰色".equals(phonePrcs.getColor())) {
+                filteredPhonePrcs.add(phonePrcs);
             }
         }
-        return filteredPhone;
+        return filteredPhonePrcs;
     }
 
     /**
      * 从手机列表中过滤出金色的手机
      *
-     * @param phoneList 手机列表
+     * @param phonePrcsList 手机列表
      * @return phoneList 金色的手机集合
      */
-    public List<Phone> filterGoldPhoneList(List<Phone> phoneList) {
-        List<Phone> filteredPhone = new ArrayList<>();
-        for (Phone phone : phoneList) {
-            if ("金色".equals(phone.getColor())) {
-                filteredPhone.add(phone);
+    public List<PhonePrcs> filterGoldPhoneList(List<PhonePrcs> phonePrcsList) {
+        List<PhonePrcs> filteredPhonePrcs = new ArrayList<>();
+        for (PhonePrcs phonePrcs : phonePrcsList) {
+            if ("金色".equals(phonePrcs.getColor())) {
+                filteredPhonePrcs.add(phonePrcs);
             }
         }
-        return filteredPhone;
+        return filteredPhonePrcs;
     }
 
 
     /**
      * 从手机列表中按颜色过滤出手机
      *
-     * @param phoneList 手机列表
+     * @param phonePrcsList 手机列表
      * @param color     颜色
      * @param price     价格
      * @param choseFlag 选择值，true--按照颜色过滤，false--按照价格过滤
      * @return phoneList 金色的手机集合
      */
-    public List<Phone> filterGoldPhoneListByCondition(List<Phone> phoneList, String color, Integer price, Boolean choseFlag) {
-        List<Phone> filteredPhone = new ArrayList<>();
-        for (Phone phone : phoneList) {
+    public List<PhonePrcs> filterGoldPhoneListByCondition(List<PhonePrcs> phonePrcsList, String color, Integer price, Boolean choseFlag) {
+        List<PhonePrcs> filteredPhonePrcs = new ArrayList<>();
+        for (PhonePrcs phonePrcs : phonePrcsList) {
 
             if (choseFlag) {
-                if (Objects.equals(color, phone.getColor())) {
-                    filteredPhone.add(phone);
+                if (Objects.equals(color, phonePrcs.getColor())) {
+                    filteredPhonePrcs.add(phonePrcs);
                 }
             } else {
-                if (phone.getPrice() > price) {
-                    filteredPhone.add(phone);
+                if (phonePrcs.getPrice() > price) {
+                    filteredPhonePrcs.add(phonePrcs);
                 }
             }
         }
-        return filteredPhone;
+        return filteredPhonePrcs;
     }
 
     /**
      * 从手机列表中按颜色过滤出手机
      *
-     * @param phoneList 手机列表
+     * @param phonePrcsList 手机列表
      * @param color     颜色
      * @return phoneList 金色的手机集合
      */
-    public List<Phone> filterGoldPhoneListByColor(List<Phone> phoneList, String color) {
-        List<Phone> filteredPhone = new ArrayList<>();
-        for (Phone phone : phoneList) {
-            if (Objects.equals(color, phone.getColor())) {
-                filteredPhone.add(phone);
+    public List<PhonePrcs> filterGoldPhoneListByColor(List<PhonePrcs> phonePrcsList, String color) {
+        List<PhonePrcs> filteredPhonePrcs = new ArrayList<>();
+        for (PhonePrcs phonePrcs : phonePrcsList) {
+            if (Objects.equals(color, phonePrcs.getColor())) {
+                filteredPhonePrcs.add(phonePrcs);
             }
         }
-        return filteredPhone;
+        return filteredPhonePrcs;
     }
 
     /**
      * 从手机列表中按颜色过滤出手机
      *
-     * @param phoneList 手机列表
+     * @param phonePrcsList 手机列表
      * @param price     价格
      * @return phoneList 金色的手机集合
      */
-    public List<Phone> filterGoldPhoneListByPrice(List<Phone> phoneList, Integer price) {
-        List<Phone> filteredPhone = new ArrayList<>();
-        for (Phone phone : phoneList) {
-            if (phone.getPrice() > price) {
-                filteredPhone.add(phone);
+    public List<PhonePrcs> filterGoldPhoneListByPrice(List<PhonePrcs> phonePrcsList, Integer price) {
+        List<PhonePrcs> filteredPhonePrcs = new ArrayList<>();
+        for (PhonePrcs phonePrcs : phonePrcsList) {
+            if (phonePrcs.getPrice() > price) {
+                filteredPhonePrcs.add(phonePrcs);
             }
         }
-        return filteredPhone;
+        return filteredPhonePrcs;
     }
 
 
@@ -117,11 +117,11 @@ public class PhoneMainSimpleTest {
      */
     @Test
     public void screenGrayPhone01() {
-        List<Phone> phones = Phone.initPhoneList();
-        List<Phone> filterGrayPhoneList = filterGrayPhoneList(phones);
-        List<Phone> filterGoldPhoneList = filterGoldPhoneList(phones);
-        System.out.println("深空灰色手机：" + filterGrayPhoneList);
-        System.out.println("金色手机：" + filterGoldPhoneList);
+        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
+        List<PhonePrcs> filterGrayPhonePrcsList = filterGrayPhoneList(phonePrcs);
+        List<PhonePrcs> filterGoldPhonePrcsList = filterGoldPhoneList(phonePrcs);
+        System.out.println("深空灰色手机：" + filterGrayPhonePrcsList);
+        System.out.println("金色手机：" + filterGoldPhonePrcsList);
     }
 
 
@@ -132,11 +132,11 @@ public class PhoneMainSimpleTest {
      */
     @Test
     public void screenGoldPhone02() {
-        List<Phone> phones = Phone.initPhoneList();
-        List<Phone> filterGoldPhoneList = filterGoldPhoneListByColor(phones, "深空灰色");
-        List<Phone> filterSilverPhoneList = filterGoldPhoneListByColor(phones, "银色");
-        System.out.println("深空灰色手机：" + filterGoldPhoneList);
-        System.out.println("银色手机：" + filterSilverPhoneList);
+        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
+        List<PhonePrcs> filterGoldPhonePrcsList = filterGoldPhoneListByColor(phonePrcs, "深空灰色");
+        List<PhonePrcs> filterSilverPhonePrcsList = filterGoldPhoneListByColor(phonePrcs, "银色");
+        System.out.println("深空灰色手机：" + filterGoldPhonePrcsList);
+        System.out.println("银色手机：" + filterSilverPhonePrcsList);
     }
 
     /**
@@ -146,12 +146,12 @@ public class PhoneMainSimpleTest {
      */
     @Test
     public void screenGoldPhone03() {
-        List<Phone> phones = Phone.initPhoneList();
-        List<Phone> filterGoldPhoneList = filterGoldPhoneListByCondition(phones, "深空灰色", null, true);
-        List<Phone> filterSilverPhoneList = filterGoldPhoneListByCondition(phones, "银色", null, true);
-        List<Phone> filterPriceList = filterGoldPhoneListByCondition(phones, null, 8800, false);
-        System.out.println("深空灰色手机：" + filterGoldPhoneList);
-        System.out.println("银色手机：" + filterSilverPhoneList);
+        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
+        List<PhonePrcs> filterGoldPhonePrcsList = filterGoldPhoneListByCondition(phonePrcs, "深空灰色", null, true);
+        List<PhonePrcs> filterSilverPhonePrcsList = filterGoldPhoneListByCondition(phonePrcs, "银色", null, true);
+        List<PhonePrcs> filterPriceList = filterGoldPhoneListByCondition(phonePrcs, null, 8800, false);
+        System.out.println("深空灰色手机：" + filterGoldPhonePrcsList);
+        System.out.println("银色手机：" + filterSilverPhonePrcsList);
         System.out.println("价格超过8800的手机：" + filterPriceList);
     }
 
@@ -162,10 +162,10 @@ public class PhoneMainSimpleTest {
      */
     @Test
     public void screenGoldPhone04() {
-        List<Phone> phones = Phone.initPhoneList();
-        List<Phone> filterGoldPhoneList = filterGoldPhoneListByCondition(phones, null, null, false);
-        List<Phone> filterSilverPhoneList = filterGoldPhoneListByCondition(phones, null, null, false);
-        System.out.println("深空灰色手机：" + filterGoldPhoneList);
-        System.out.println("银色手机：" + filterSilverPhoneList);
+        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
+        List<PhonePrcs> filterGoldPhonePrcsList = filterGoldPhoneListByCondition(phonePrcs, null, null, false);
+        List<PhonePrcs> filterSilverPhonePrcsList = filterGoldPhoneListByCondition(phonePrcs, null, null, false);
+        System.out.println("深空灰色手机：" + filterGoldPhonePrcsList);
+        System.out.println("银色手机：" + filterSilverPhonePrcsList);
     }
 }
