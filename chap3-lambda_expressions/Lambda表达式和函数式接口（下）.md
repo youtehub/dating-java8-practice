@@ -1,6 +1,6 @@
 ## Lambda表达式和函数式接口（下）
 
-原创 翎野君 [翎驿](javascript:void(0);)   <font color='gray'>2020-01-23</font>
+原创 翎野君 [翎驿](http://www.cnblogs.com/lingyejun)   <font color='gray'>2020-01-23</font>
 
 
 
