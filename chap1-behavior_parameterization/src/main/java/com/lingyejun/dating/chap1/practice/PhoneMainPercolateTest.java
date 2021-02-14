@@ -22,10 +22,10 @@ public class PhoneMainPercolateTest {
      */
     @Test
     public void screenPhoneByColor() {
-        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
+        List<PhonePro> phonePrcs = PhonePro.initPhoneList();
         PhoneColorPredicate colorPredicate = new PhoneColorPredicate("深空灰色");
-        List<PhonePrcs> phonePrcsList = PhonePredicateBusiness.usePredicateImpl(phonePrcs, colorPredicate);
-        System.out.println("深空灰色手机：" + phonePrcsList);
+        List<PhonePro> phoneProList = PhonePredicateBusiness.usePredicateImpl(phonePrcs, colorPredicate);
+        System.out.println("深空灰色手机：" + phoneProList);
     }
 
     /**
@@ -34,10 +34,10 @@ public class PhoneMainPercolateTest {
      */
     @Test
     public void screenPhoneByPrice() {
-        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
+        List<PhonePro> phonePrcs = PhonePro.initPhoneList();
         PhonePricePredicate pricePredicate = new PhonePricePredicate(8800);
-        List<PhonePrcs> phonePrcsList = PhonePredicateBusiness.usePredicateImpl(phonePrcs, pricePredicate);
-        System.out.println("深空灰色手机：" + phonePrcsList);
+        List<PhonePro> phoneProList = PhonePredicateBusiness.usePredicateImpl(phonePrcs, pricePredicate);
+        System.out.println("深空灰色手机：" + phoneProList);
     }
 
     /**
@@ -46,10 +46,10 @@ public class PhoneMainPercolateTest {
      */
     @Test
     public void screenPhoneByPriceAndAdapter() {
-        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
+        List<PhonePro> phonePrcs = PhonePro.initPhoneList();
         PhonePredicate phonePredicate01 = new PhonePredicate() {
             @Override
-            public boolean percolate(PhonePrcs phone) {
+            public boolean percolate(PhonePro phone) {
                 String color = "暗夜绿色";
                 if (color.equals(phone.getColor())) {
                     return true;
@@ -59,12 +59,12 @@ public class PhoneMainPercolateTest {
         };
         PhonePredicate phonePredicate02 = new PhonePredicate() {
             @Override
-            public boolean percolate(PhonePrcs phone) {
+            public boolean percolate(PhonePro phone) {
                 return "暗夜绿色".equals(phone.getColor());
             }
         };
-        List<PhonePrcs> phonePrcsList = PhonePredicateBusiness.usePredicateImpl(phonePrcs, phonePredicate02);
-        System.out.println("暗夜绿色色手机：" + phonePrcsList);
+        List<PhonePro> phoneProList = PhonePredicateBusiness.usePredicateImpl(phonePrcs, phonePredicate02);
+        System.out.println("暗夜绿色色手机：" + phoneProList);
     }
 
     /**
@@ -73,17 +73,17 @@ public class PhoneMainPercolateTest {
      */
     @Test
     public void screenPhoneByPriceAndLambda() {
-        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
-        PhonePredicate phonePredicate01 = (PhonePrcs phone) -> {
+        List<PhonePro> phonePrcs = PhonePro.initPhoneList();
+        PhonePredicate phonePredicate01 = (PhonePro phone) -> {
             String color = "暗夜绿色";
             if (color.equals(phone.getColor())) {
                 return true;
             }
             return false;
         };
-        PhonePredicate phonePredicate02 = (PhonePrcs phone) -> "暗夜绿色".equals(phone.getColor());
-        List<PhonePrcs> phonePrcsList = PhonePredicateBusiness.usePredicateImpl(phonePrcs, phonePredicate02);
-        System.out.println("暗夜绿色色手机：" + phonePrcsList);
+        PhonePredicate phonePredicate02 = (PhonePro phone) -> "暗夜绿色".equals(phone.getColor());
+        List<PhonePro> phoneProList = PhonePredicateBusiness.usePredicateImpl(phonePrcs, phonePredicate02);
+        System.out.println("暗夜绿色色手机：" + phoneProList);
     }
 
 }

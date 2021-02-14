@@ -1,6 +1,6 @@
 package com.lingyejun.dating.chap2.train;
 
-import com.lingyejun.dating.chap1.practice.PhonePrcs;
+import com.lingyejun.dating.chap1.practice.PhonePro;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -21,14 +21,14 @@ public class LambdaTrainTest {
      * @param list 手机列表
      * @return 筛选出的手机
      */
-    public static List<PhonePrcs> getPhoneListByName(List<PhonePrcs> list) {
-        List<PhonePrcs> phonePrcsList = new ArrayList<>();
-        for (PhonePrcs phonePrcs : list) {
-            if ("iPhone 11 Pro".equals(phonePrcs.getProductName())) {
-                phonePrcsList.add(phonePrcs);
+    public static List<PhonePro> getPhoneListByName(List<PhonePro> list) {
+        List<PhonePro> phoneProList = new ArrayList<>();
+        for (PhonePro phonePro : list) {
+            if ("iPhone 11 Pro".equals(phonePro.getProductName())) {
+                phoneProList.add(phonePro);
             }
         }
-        return phonePrcsList;
+        return phoneProList;
     }
 
 
@@ -39,31 +39,31 @@ public class LambdaTrainTest {
     public void parameteRization() {
         ProcessFind processFind = new ProcessFind() {
             @Override
-            public List<PhonePrcs> queryPhoneList(List<PhonePrcs> list) {
-                List<PhonePrcs> phonePrcsList = new ArrayList<>();
-                for (PhonePrcs phone : list) {
+            public List<PhonePro> queryPhoneList(List<PhonePro> list) {
+                List<PhonePro> phoneProList = new ArrayList<>();
+                for (PhonePro phone : list) {
                     if ("iPhone 11 Pro".equals(phone.getProductName())) {
-                        phonePrcsList.add(phone);
+                        phoneProList.add(phone);
                     }
                 }
-                return phonePrcsList;
+                return phoneProList;
             }
         };
-        List<PhonePrcs> phonePrcsList = PhonePrcs.initPhoneList();
-        List<PhonePrcs> queryPhonePrcsList = processFind.queryPhoneList(phonePrcsList);
-        System.out.println(queryPhonePrcsList);
+        List<PhonePro> phoneProList = PhonePro.initPhoneList();
+        List<PhonePro> queryPhoneProList = processFind.queryPhoneList(phoneProList);
+        System.out.println(queryPhoneProList);
 
         // 2.使用函数式接口来传递行为 -> 将行为进行抽象，提取到ProcessFind接口当中
         // 3.执行一个行为 -> 在外部代码中执行函数式接口当中的抽象方法
         // 4.传递Lambda
-        ProcessFind processFindLambda = (List<PhonePrcs> list) -> {
-            List<PhonePrcs> phonePrcsList01 = new ArrayList<>();
-            for (PhonePrcs phone : list) {
+        ProcessFind processFindLambda = (List<PhonePro> list) -> {
+            List<PhonePro> phoneProList01 = new ArrayList<>();
+            for (PhonePro phone : list) {
                 if ("iPhone 11 Pro".equals(phone.getProductName())) {
-                    phonePrcsList01.add(phone);
+                    phoneProList01.add(phone);
                 }
             }
-            return phonePrcsList01;
+            return phoneProList01;
 
 //            phoneList01 = list.stream()
 //                    .filter(phone -> "iPhone 11 Pro".equals(phone.getProductName()))
@@ -74,8 +74,8 @@ public class LambdaTrainTest {
 //                    .filter(phone -> "iPhone 11 Pro".equals(phone.getProductName()))
 //                    .collect(Collectors.toList());
         };
-        List<PhonePrcs> queryPhonePrcsList01 = processFindLambda.queryPhoneList(phonePrcsList);
-        System.out.println(queryPhonePrcsList01);
+        List<PhonePro> queryPhoneProList01 = processFindLambda.queryPhoneList(phoneProList);
+        System.out.println(queryPhoneProList01);
     }
 
 

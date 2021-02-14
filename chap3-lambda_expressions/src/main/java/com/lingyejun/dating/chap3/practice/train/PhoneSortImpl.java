@@ -1,6 +1,6 @@
 package com.lingyejun.dating.chap3.practice.train;
 
-import com.lingyejun.dating.chap1.practice.PhonePrcs;
+import com.lingyejun.dating.chap1.practice.PhonePro;
 
 import java.util.Comparator;
 
@@ -10,10 +10,10 @@ import java.util.Comparator;
  * @author yiyh
  * @date 2021-02-14 16:08
  */
-public class PhoneSortImpl implements Comparator<PhonePrcs> {
+public class PhoneSortImpl implements Comparator<PhonePro> {
 
     @Override
-    public int compare(PhonePrcs o1, PhonePrcs o2) {
+    public int compare(PhonePro o1, PhonePro o2) {
         return o1.getPrice().compareTo(o2.getPrice());
     }
 }

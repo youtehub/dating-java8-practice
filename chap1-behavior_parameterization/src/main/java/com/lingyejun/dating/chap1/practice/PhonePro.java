@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class PhonePrcs {
+public class PhonePro {
 
 
     /**
@@ -50,15 +50,15 @@ public class PhonePrcs {
      *
      * @return List<Phone> 手机列表
      */
-    public static List<PhonePrcs> initPhoneList() {
-        List<PhonePrcs> phonePrcs = new ArrayList<>();
-        PhonePrcs phonePrcs1 = new PhonePrcs(1, "iPhone 11 Pro", "深空灰色", "64GB", 8699);
-        PhonePrcs phonePrcs2 = new PhonePrcs(2, "iPhone 11 Pro", "银色", "64GB", 8700);
-        PhonePrcs phonePrcs3 = PhonePrcs.builder().id(3).productName("iPhone 11 Pro Max").color("银色").spec("256GB").price(8900).build();
+    public static List<PhonePro> initPhoneList() {
+        List<PhonePro> phonePrcs = new ArrayList<>();
+        PhonePro phonePro1 = new PhonePro(1, "iPhone 11 Pro", "深空灰色", "64GB", 8699);
+        PhonePro phonePro2 = new PhonePro(2, "iPhone 11 Pro", "银色", "64GB", 8700);
+        PhonePro phonePro3 = PhonePro.builder().id(3).productName("iPhone 11 Pro Max").color("银色").spec("256GB").price(8900).build();
 
-        phonePrcs.add(phonePrcs1);
-        phonePrcs.add(phonePrcs2);
-        phonePrcs.add(phonePrcs3);
+        phonePrcs.add(phonePro1);
+        phonePrcs.add(phonePro2);
+        phonePrcs.add(phonePro3);
 
         return phonePrcs;
     }

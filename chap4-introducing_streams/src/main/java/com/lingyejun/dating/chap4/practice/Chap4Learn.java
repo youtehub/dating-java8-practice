@@ -2,7 +2,7 @@ package com.lingyejun.dating.chap4.practice;
 
 import com.lingyejun.dating.chap1.Phone;
 import com.lingyejun.dating.chap1.PhoneMain;
-import com.lingyejun.dating.chap1.practice.PhonePrcs;
+import com.lingyejun.dating.chap1.practice.PhonePro;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -72,11 +72,11 @@ public class Chap4Learn {
      */
     @Test
     public void convertColorByStream() {
-        List<PhonePrcs> phonePrcsList = PhonePrcs.initPhoneList();
-        List<String> nameList = phonePrcsList.stream()
+        List<PhonePro> phoneProList = PhonePro.initPhoneList();
+        List<String> nameList = phoneProList.stream()
                 .filter(phone -> Objects.equals(phone.getColor(),"银色"))
-                .sorted(Comparator.comparing(PhonePrcs::getPrice))
-                .map(PhonePrcs::getProductName)
+                .sorted(Comparator.comparing(PhonePro::getPrice))
+                .map(PhonePro::getProductName)
                 .collect(Collectors.toList());
         for (String name : nameList) {
             System.out.println(name);

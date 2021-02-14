@@ -58,10 +58,10 @@ public class PhoneMainTypeTest<T> {
      */
     @Test
     public void usePredicateImplTest() {
-        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
-        PhoneMainTypeTest<PhonePrcs> phoneMainTypeTest = new PhoneMainTypeTest();
-        Predicate<PhonePrcs> phonePredicate = (PhonePrcs phone) -> "256GB".equals(phone.getSpec());
-        List<PhonePrcs> filterList = phoneMainTypeTest.usePredicateImpl(phonePrcs, phonePredicate);
+        List<PhonePro> phonePrcs = PhonePro.initPhoneList();
+        PhoneMainTypeTest<PhonePro> phoneMainTypeTest = new PhoneMainTypeTest();
+        Predicate<PhonePro> phonePredicate = (PhonePro phone) -> "256GB".equals(phone.getSpec());
+        List<PhonePro> filterList = phoneMainTypeTest.usePredicateImpl(phonePrcs, phonePredicate);
         System.out.println(filterList);
     }
 
@@ -70,10 +70,10 @@ public class PhoneMainTypeTest<T> {
      */
     @Test
     public void usePredicateImplByStreamTest() {
-        List<PhonePrcs> phonePrcs = PhonePrcs.initPhoneList();
-        PhoneMainTypeTest<PhonePrcs> phoneMainTypeTest = new PhoneMainTypeTest();
-        Predicate<PhonePrcs> phonePredicate = (PhonePrcs phone) -> "256GB".equals(phone.getSpec());
-        List<PhonePrcs> filterList = phoneMainTypeTest.usePredicateImplByStream(phonePrcs, phonePredicate);
+        List<PhonePro> phonePrcs = PhonePro.initPhoneList();
+        PhoneMainTypeTest<PhonePro> phoneMainTypeTest = new PhoneMainTypeTest();
+        Predicate<PhonePro> phonePredicate = (PhonePro phone) -> "256GB".equals(phone.getSpec());
+        List<PhonePro> filterList = phoneMainTypeTest.usePredicateImplByStream(phonePrcs, phonePredicate);
         System.out.println(filterList);
     }
 

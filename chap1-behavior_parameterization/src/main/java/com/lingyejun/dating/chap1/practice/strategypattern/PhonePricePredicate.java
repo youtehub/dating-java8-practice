@@ -1,6 +1,6 @@
 package com.lingyejun.dating.chap1.practice.strategypattern;
 
-import com.lingyejun.dating.chap1.practice.PhonePrcs;
+import com.lingyejun.dating.chap1.practice.PhonePro;
 import lombok.*;
 
 /**
@@ -24,12 +24,12 @@ public class PhonePricePredicate implements PhonePredicate {
     /**
      * 判断手机是否满足某一个条件
      *
-     * @param phonePrcs 需要校验的手机
+     * @param phonePro 需要校验的手机
      * @return 判断结果
      */
     @Override
-    public boolean percolate(PhonePrcs phonePrcs) {
-        if (phonePrcs.getPrice() > price) {
+    public boolean percolate(PhonePro phonePro) {
+        if (phonePro.getPrice() > price) {
             return true;
         }
         return false;
