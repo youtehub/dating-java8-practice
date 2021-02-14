@@ -71,4 +71,14 @@ public class MethodReference {
         BiPredicate<List<String>, String> contains02 = List::contains;
     }
 
+
+    /**
+     * 构造方法的引用
+     */
+    @Test
+    public void constructorReference() {
+        Supplier<Phone> supplier = Phone::new;
+        Function<Integer, Phone> supplier1 = Phone::new;
+    }
+
 }
