@@ -1,5 +1,7 @@
 package com.lingyejun.dating.chap5;
 
+import lombok.*;
+
 import java.util.List;
 
 /**
@@ -8,6 +10,10 @@ import java.util.List;
  * @Describe:
  * @Modified By:
  */
+@Data
+@Builder
+@NoArgsConstructor
+@ToString
 public class Worker {
 
     private String name;

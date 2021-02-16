@@ -1,11 +1,17 @@
 package com.lingyejun.dating.chap5;
 
+import lombok.*;
+
 /**
  * @Author: lingyejun
  * @Date: 2019/11/16
  * @Describe:
  * @Modified By:
  */
+@Data
+@Builder
+@NoArgsConstructor
+@ToString
 public class House {
 
     private String address;
