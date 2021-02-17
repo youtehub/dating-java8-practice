@@ -14,6 +14,9 @@ import lombok.*;
 @ToString
 public class Car {
 
+    /**
+     * 品牌
+     */
     private String brand;
 
     public String getBrand() {
@@ -34,8 +37,6 @@ public class Car {
                 "brand='" + brand + '\'' +
                 '}';
     }
-
-
 
 
 }

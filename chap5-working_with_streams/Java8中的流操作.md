@@ -12,13 +12,11 @@
 
 
 
-![图片](https://img-blog.csdnimg.cn/img_convert/4cea12b930d5aa90d75dba2b6046fdd5.png)
-
-## 筛选和切片
+## 01.筛选和切片
 
 
 
-### 01.用谓词筛选
+### 用谓词筛选
 
 Streams接口支持filter方法。该操作会接受一个谓词(一个返回 boolean的函数)作为参数，并返回一个包括所有符合谓词的元素的流。
 
@@ -97,7 +95,7 @@ List<String> dishNames = menu.stream().map(Dish::getName).collect(toList());
 
 ```java
 List<String> words = Arrays.asList("Java 8", "Lambdas", "In", "Action");
-    List<Integer> wordLengths = words.stream().map(String::length).collect(toList());
+List<Integer> wordLengths = words.stream().map(String::length).collect(toList());
 ```
 
 现在让我们回到提取菜名的例子。如果你要找出每道菜的名称有多长，怎么做?你可以像下面这样，再链接上一个map:

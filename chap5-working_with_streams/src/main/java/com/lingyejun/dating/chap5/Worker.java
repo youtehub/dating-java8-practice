@@ -16,16 +16,34 @@ import java.util.List;
 @ToString
 public class Worker {
 
+    /**
+     * 姓名
+     */
     private String name;
 
+    /**
+     * 性别
+     */
     private String sex;
 
+    /**
+     * 婚否
+     */
     private Boolean isMarried;
 
+    /**
+     * 薪水
+     */
     private Integer salary;
 
+    /**
+     * 拥有的汽车
+     */
     private List<Car> carList;
 
+    /**
+     * 持有的房产
+     */
     private List<House> houseList;
 
     public String getName() {

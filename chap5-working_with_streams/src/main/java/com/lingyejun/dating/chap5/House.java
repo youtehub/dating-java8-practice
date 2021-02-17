@@ -14,6 +14,9 @@ import lombok.*;
 @ToString
 public class House {
 
+    /**
+     * 地址
+     */
     private String address;
 
     public String getAddress() {
