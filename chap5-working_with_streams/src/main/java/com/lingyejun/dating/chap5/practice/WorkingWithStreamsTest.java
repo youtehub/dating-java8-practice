@@ -208,4 +208,100 @@ public class WorkingWithStreamsTest {
                 .collect(Collectors.toList());
         System.out.println("所有员工的住址列表: " + addressList);
     }
+
+    // 查找匹配 allMatch、anyMatch、noneMatch、findFirst、findAny
+
+    /**
+     * 学习使用 allMatch
+     */
+    @Test
+    public void learnAllMatch() {
+        //需求：所有员工是否为男性
+        boolean allMatch = WORKERLIST.stream()
+                .allMatch(worker -> "男".equals(worker.getSex()));
+        System.out.println("所有员工是否为男性: " + allMatch);
+    }
+
+    /**
+     * 学习使用 anyMatch
+     */
+    @Test
+    public void learnAnyMatch() {
+        //需求：是否存在没有结婚的人
+        boolean anyMatch = WORKERLIST.stream()
+                .anyMatch(worker -> !worker.getMarried());
+        System.out.println("是否存在没有结婚的人: " + anyMatch);
+
+        //需求：过滤出单身的人名
+        List<String> nameList = WORKERLIST.stream()
+                .filter(worker -> !worker.getMarried())
+                .map(Worker::getName)
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println("单身的人名: " + nameList);
+    }
+
+    /**
+     * 学习使用 noneMatch
+     */
+    @Test
+    public void learnNoneMatch() {
+        //所有的人的工资不超过20000
+        boolean noneMatch = WORKERLIST.stream()
+                .noneMatch(worker -> worker.getSalary() > 20000);
+        System.out.println("所有的人的工资不超过20000: " + noneMatch);
+
+    }
+
+
+    /**
+     * 学习使用 findAny
+     */
+    @Test
+    public void learnFindAny() {
+        //找出任意一个没有结婚的人
+        Optional<Worker> optionalWorker = WORKERLIST.stream()
+                .filter(worker -> !worker.getMarried())
+                .findAny();
+        Worker worker = new Worker();
+        if (optionalWorker.isPresent()) {
+            worker = optionalWorker.get();
+        }
+        System.out.println(worker);
+    }
+
+    /**
+     * 学习使用 findFirst
+     */
+    @Test
+    public void learnFindFirst() {
+        //找一个未婚的女性中的第一个
+        Optional<Worker> optionalWorker = WORKERLIST.stream()
+                .filter(worker -> !worker.getMarried() && worker.getSex().equals("女"))
+                .findFirst();
+        System.out.println(optionalWorker);
+    }
+
+    // 归约 reduce
+
+    /**
+     * 学习使用 reduce
+     */
+    @Test
+    public void learnReduce() {
+        List<Integer> integerList = Arrays.asList(1, 2, 4, 5, 7, 8);
+        Integer sum = integerList.stream().reduce(1, (a, b) -> a * b);
+        System.out.println("integerList求和后：" + sum);
+
+        //找到工人中工资最多是多少
+        Optional<Integer> maxSalary = WORKERLIST.stream()
+                .map(Worker::getSalary)
+                .reduce(Integer::max);
+        Optional<Integer> minSalary = WORKERLIST.stream()
+                .map(Worker::getSalary)
+                .reduce(Integer::max);
+        System.out.println("工资最多是: " + maxSalary.get());
+        System.out.println("工资最少是: " + minSalary.get());
+    }
+
 }

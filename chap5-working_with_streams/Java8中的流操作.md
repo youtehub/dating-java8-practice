@@ -258,7 +258,8 @@ numbers中的每个元素都用加法运算符反复迭代来得到结果。通�
 int sum = 0;
 for (int x : numbers){
   sum += x;
-}```
+}
+```
 
 这段代码中有两个参数:
 
@@ -317,11 +318,9 @@ Optional<Integer> max = numbers.stream().reduce(Integer::max);
 ![图片](https://img-blog.csdnimg.cn/img_convert/db77cdecfbdec0e379ca32c32c9dfea5.png)
 
 
-
-![图片](https://img-blog.csdnimg.cn/img_convert/4d28d3101de3e868598903d58252eb04.png)
-
 ## 05.总结
 
+![图片](https://img-blog.csdnimg.cn/20210217185628487.png)
 
 
 - Streams API可以表达复杂的数据处理查询。
