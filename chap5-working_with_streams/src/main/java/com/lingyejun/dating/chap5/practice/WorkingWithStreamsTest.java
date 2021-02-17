@@ -1,5 +1,7 @@
 package com.lingyejun.dating.chap5.practice;
 
+import com.lingyejun.dating.chap5.Car;
+import com.lingyejun.dating.chap5.House;
 import com.lingyejun.dating.chap5.Worker;
 import com.lingyejun.dating.chap5.WorkingWithStreams;
 import org.junit.Test;
@@ -7,6 +9,7 @@ import org.junit.Test;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * 流操作的具体学习
@@ -142,6 +145,67 @@ public class WorkingWithStreamsTest {
      */
     @Test
     public void learnFlatMap() {
+        List<String> wordList = Arrays.asList("Hello", "World");
+        //需求：得到一个字符列表，且没有重复字符
+        //第一种方式来完成，将每个单词分割成字符数组
+        List<String[]> word01 = wordList.stream()
+                .map(str -> str.split(""))
+                .collect(Collectors.toList());
+        List<String[]> word02 = word01.stream()
+                .distinct()
+                .collect(Collectors.toList());
 
+        //第二种方式，Arrays.stream形式来解决,得到一个流的列表，还是无法解决
+        Stream<Stream<String>> streamStream = wordList.stream()
+                .map(str -> str.split(""))
+                .map(Arrays::stream);
+
+        //第三种方式，flatMap
+        Stream<String> stream2 = wordList.stream()
+                .map(str -> str.split(""))
+                .flatMap(Arrays::stream);
+        List<String> word03 = stream2.distinct()
+                .collect(Collectors.toList());
+        System.out.println("得到的字符数组：" + word03);
+    }
+
+    /**
+     * 练习使用 flatMap
+     */
+    @Test
+    public void trainFlatMap() {
+        //查找员工拥有的所有汽车信息
+        List<List<Car>> work9 = WORKERLIST.stream()
+                .map(Worker::getCarList)
+                .collect(Collectors.toList());
+
+        //获取工人所拥有的汽车，去重得到不重复的汽车品牌列表
+
+        //第一步，首先得到汽车对象
+        List<Car> work10 = WORKERLIST.stream()
+                .map(Worker::getCarList)
+                .filter(Objects::nonNull)
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
+
+        //第二步，进行去重操作
+        List<String> brandList = WORKERLIST.stream()
+                .map(worker -> worker.getCarList())
+                .filter(list -> list != null)
+                .flatMap(list -> list.stream())
+                .map(car -> car.getBrand())
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println("汽车的品牌名称：" + brandList);
+
+        //需求：得到所有员工的住址列表
+        List<String> addressList = WORKERLIST.stream()
+                .map(Worker::getHouseList)
+                .filter(Objects::nonNull)
+                .flatMap(List::stream)
+                .map(House::getAddress)
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println("所有员工的住址列表: " + addressList);
     }
 }

@@ -161,9 +161,8 @@ List<String> uniqueCharacters =words.stream().map(w -> w.split("")).flatMap(Arra
 
 
 
-![图片](https://img-blog.csdnimg.cn/img_convert/b47806dcfd0c950b1da34e2bbf6c8cc4.png)
 
-## 03查找和匹配
+## 03.查找和匹配
 
 
 
@@ -234,8 +233,6 @@ someNumbers.stream().map(x -> x * x).filter(x -> x % 3 == 0).findFirst();
 ```
 
 
-
-![图片](https://img-blog.csdnimg.cn/img_convert/d0a550d3c2fe86aff272fc7adffbfe13.png)
 
 ## 04.归约
 
