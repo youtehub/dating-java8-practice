@@ -1,11 +1,18 @@
 package com.lingyejun.dating.chap9;
 
+import lombok.*;
+
 /**
  * @Author: lingyejun
  * @Date: 2019/12/21
  * @Describe: 
  * @Modified By:
  */
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Car {
 
     private String carName;

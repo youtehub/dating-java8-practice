@@ -1,5 +1,7 @@
 package com.lingyejun.dating.chap9;
 
+import lombok.*;
+
 import java.util.Optional;
 
 /**
@@ -8,6 +10,11 @@ import java.util.Optional;
  * @Describe:
  * @Modified By:
  */
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class User {
 
     private String userName;

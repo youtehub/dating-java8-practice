@@ -2,6 +2,9 @@
 
 ## 前言
 
+dating-java8-practice: 3a438ed3fbd39c35f70178ee1a3f7db240a79ad6
+mvn sonar:sonar   -Dsonar.projectKey=dating-java8-practice   -Dsonar.host.url=http://127.0.0.1:9000   -Dsonar.login=admin  -Dsonar.password=admin
+
 **Dating Java8** 系列视频从实用性的角度出发介绍了Java8中的核心特性及其应用场景。
 
 通过系列视频的学习后你将掌握较之以往更为巧妙的编码方式和编程技巧，从而提升我们的开发效率。
