@@ -106,7 +106,8 @@ public class TestOptional {
             }
         });
 
-        Optional.ofNullable(user).filter(u -> Objects.equals(u.getUserName(), "张三"))
+        Optional.ofNullable(user)
+                .filter(u -> Objects.equals(u.getUserName(), "张三"))
                 .ifPresent(x -> {
                     x.setUserName("李四");
                     System.out.println(x.getUserName() + "Test By Filter");

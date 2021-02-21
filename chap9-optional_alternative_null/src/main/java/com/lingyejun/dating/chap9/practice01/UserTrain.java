@@ -1,6 +1,8 @@
-package com.lingyejun.dating.chap9.practice;
+package com.lingyejun.dating.chap9.practice01;
 
 import lombok.*;
+
+import java.util.Optional;
 
 /**
  * 用户实体类
@@ -17,7 +19,9 @@ public class UserTrain {
 
     private String userName;
 
-    private CarPra carPra;
+    private CarTrain carTrain;
+
+    private Optional<HouseTrain> houseTrain;
 
     public UserTrain(String userName) {
         this.userName = userName;

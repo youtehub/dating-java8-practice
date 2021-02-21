@@ -1,4 +1,4 @@
-package com.lingyejun.dating.chap9.practice;
+package com.lingyejun.dating.chap9.practice01;
 
 import lombok.*;
 
@@ -13,9 +13,9 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class CarPra {
+public class CarTrain {
 
     private String carName;
 
-    private InsuracePra insuracePra;
+    private InsuraceTrain insuraceTrain;
 }

@@ -307,7 +307,7 @@ String userName = Optional.ofNullable(user).orElse(new User()).getUserName();
 String carName = Optional.ofNullable(user).map(u -> u.getCar()).map(c -> c.getCarName()).orElse(null);
 ```
 
-**将用户名转为大写**
+**用户名存在的时候则转为大写**
 
 ```java
 String optionMap = Optional.ofNullable("abc").map(value -> value.toUpperCase()).get();
